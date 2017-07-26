@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>报表打印</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META http-equiv=Content-Language content=gb2312>
+<STYLE>
+TABLE {
+	FONT-SIZE: 12px; BORDER-COLLAPSE: collapse
+}
+TABLE TBODY TD {
+	BORDER-RIGHT: #000 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #000 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; BORDER-LEFT: #000 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #000 1px solid; TEXT-ALIGN: center
+}
+table tfoot th{
+	font-size:12px; text-align:left; padding-left:12%; padding-top:30px;
+}
+.tdline {
+	BORDER-RIGHT: #000 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #000 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; BORDER-LEFT: #000 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #000 1px solid; TEXT-ALIGN: center
+}
+TABLE TH {
+	FONT-WEIGHT: 400; FONT-SIZE: 15pt; HEIGHT: 50px
+}
+.pageEnd {
+	PAGE-BREAK-AFTER: always
+}
+</STYLE>
+
+<STYLE>
+@media Print    
+{
+.bgnoprint {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+.noprint {
+	DISPLAY: none
+}
+.yesprint {
+	DISPLAY: block
+}
+
+}
+</STYLE>
+
+<SCRIPT language=JavaScript>   
+			
+function PageSetup_del(){ 
+	var HKEY_Root,HKEY_Path,HKEY_Key; 
+	HKEY_Root="HKEY_CURRENT_USER"; 
+	HKEY_Path="\\Software\\Microsoft\\Internet Explorer\\PageSetup\\";
+	var Wsh=new ActiveXObject("WScript.Shell");   
+	HKEY_Key="header"; 
+	Wsh.RegWrite(HKEY_Root+HKEY_Path+HKEY_Key,""); 
+	HKEY_Key="footer"; 
+	Wsh.RegWrite(HKEY_Root+HKEY_Path+HKEY_Key,""); 
+	HKEY_Key="margin_left"; 
+	Wsh.RegWrite(HKEY_Root+HKEY_Path+HKEY_Key,"0.39370"); 
+	HKEY_Key="margin_right"; 
+	Wsh.RegWrite(HKEY_Root+HKEY_Path+HKEY_Key,"0.39370"); 
+	HKEY_Key="margin_bottom"; 
+	Wsh.RegWrite(HKEY_Root+HKEY_Path+HKEY_Key,"0.49370"); 
+	HKEY_Key="margin_top"; 
+	Wsh.RegWrite(HKEY_Root+HKEY_Path+HKEY_Key,"0.49370"); 
+}
+	
+function Preview1(){
+	try{
+		PageSetup_del();
+		window.print();
+	}catch(e){window.print();}
+}
+</SCRIPT>
+
+<SCRIPT defer>   
+function  PutSettings(){     
+	factory.printing.header="";   
+	factory.printing.footer="";  
+	factory.printing.leftMargin="13";  
+	factory.printing.rightMargin="10";  
+	factory.printing.topMargin="10";   			 
+	factory.printing.bottomMargin="0.1"; 	
+}
+function Print(){
+	PutSettings();
+	factory.printing.Print(true);
+}
+
+function Preview(){
+	try{
+		PutSettings();
+		factory.printing.Preview();
+	}catch(e){}
+}
+</SCRIPT>
+</HEAD>
+<BODY onload=Preview();>
+<OBJECT id=factory style="DISPLAY: none" codeBase=ScriptX.cab#Version=5,60,0,360 
+classid=clsid:1663ed61-23eb-11d2-b92f-008048fdd814 VIEWASTEXT></OBJECT>
+<FORM id=form1 name=form1 
+action=to_cjdy_zgs.aspx?xh=0622&amp;XKKH=(2013-2014-2)-06100007-0622-1&amp;JFZ=0&amp;cjbblb1=1&amp;bmc=cjb&amp;BJDM=&amp;printType=2&amp;jfz1=0 
+method=post><INPUT type=hidden 
+value=dDwxMzUyNzM3ODg4Ozs+mW09y1EwD/8zI/zaRC2iny8ZAV4= name=__VIEWSTATE> 
+<TABLE width=960 align=center>
+  <THEAD>
+  <TR>
+    <TH colspan="22" align=middle>普洱学院课堂教学评价表（同行评价）</TH>
+    </TR>
+  <TR>
+    <TD style="text-align:right;">&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD style="text-align:right;">&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD width="12%" style="text-align:right;">任课教师：</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD style="text-align:right;">&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD style="text-align:right;">评价成员：</TD>
+    <TD colspan="21">&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD style="text-align:right;">&nbsp;</TD>
+    <TD colspan="21">&nbsp;</TD>
+  </TR>
+  </THEAD>
+  <TBODY>
+  <TR>
+    <TD width="12%" rowspan="3" class="tdline">&nbsp;</TD>
+    <TD height="40" colspan="20" class="tdline">指标得分</TD>
+    <TD width="8%" rowspan="3" class="tdline">合计</TD>
+    </TR>
+  <TR>
+    <TD height="33" colspan="5" class="tdline">教学态度（20%）</TD>
+    <TD colspan="5" class="tdline">教学内容（30%）</TD>
+    <TD colspan="5" class="tdline">教学方法（20%）</TD>
+    <TD colspan="5" class="tdline">教学效果（30%）</TD>
+    </TR>
+  <TR>
+    <TD width="4%" height="30" class="tdline">1</TD>
+    <TD width="4%" class="tdline">2</TD>
+    <TD width="4%" class="tdline">3</TD>
+    <TD width="4%" class="tdline">4</TD>
+    <TD width="4%" class="tdline">5</TD>
+    <TD width="4%" class="tdline">6</TD>
+    <TD width="4%" class="tdline">7</TD>
+    <TD width="4%" class="tdline">8</TD>
+    <TD width="4%" class="tdline">9</TD>
+    <TD width="4%" class="tdline">10</TD>
+    <TD width="4%" class="tdline">11</TD>
+    <TD width="4%" class="tdline">12</TD>
+    <TD width="4%" class="tdline">13</TD>
+    <TD width="4%" class="tdline">14</TD>
+    <TD width="4%" class="tdline">15</TD>
+    <TD width="4%" class="tdline">16</TD>
+    <TD width="4%" class="tdline">17</TD>
+    <TD width="4%" class="tdline">18</TD>
+    <TD width="4%" class="tdline">19</TD>
+    <TD width="4%" class="tdline">20</TD>
+    </TR>
+  <TR>
+    <TD class="tdline">&nbsp;</TD>
+    <TD height="30" class="tdline">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+  </TR>
+  </TBODY>
+  <tfoot>
+  <TR>
+    <TH colspan="22">　　总分：<br>调查人数：<br>　平均分：</TH>
+  </TR>
+  </tfoot>
+</TABLE>
+<DIV class=noprint align=center><INPUT id=btnPrint onclick=Preview1(); type=button value=" 打 印  "> 
+</DIV></FORM></BODY></HTML>

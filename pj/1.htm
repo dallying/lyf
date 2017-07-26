@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>报表打印</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META http-equiv=Content-Language content=gb2312>
+<STYLE>TABLE {
+	FONT-SIZE: 12px; BORDER-COLLAPSE: collapse
+}
+TABLE TBODY TD {
+	BORDER-RIGHT: #000 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #000 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; BORDER-LEFT: #000 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #000 1px solid; TEXT-ALIGN: center
+}
+.tdline {
+	BORDER-RIGHT: #000 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #000 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; BORDER-LEFT: #000 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #000 1px solid; TEXT-ALIGN: center
+}
+TABLE TH {
+	FONT-WEIGHT: 400; FONT-SIZE: 15pt; HEIGHT: 50px
+}
+.pageEnd {
+	PAGE-BREAK-AFTER: always
+}
+</STYLE>
+
+<STYLE>
+@media Print    
+{
+.bgnoprint {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+.noprint {
+	DISPLAY: none
+}
+.yesprint {
+	DISPLAY: block
+}
+
+}
+</STYLE>
+
+<SCRIPT language=JavaScript>   
+			
+function PageSetup_del(){ 
+	var HKEY_Root,HKEY_Path,HKEY_Key; 
+	HKEY_Root="HKEY_CURRENT_USER"; 
+	HKEY_Path="\\Software\\Microsoft\\Internet Explorer\\PageSetup\\";
+	var Wsh=new ActiveXObject("WScript.Shell");   
+	HKEY_Key="header"; 
+	Wsh.RegWrite(HKEY_Root+HKEY_Path+HKEY_Key,""); 
+	HKEY_Key="footer"; 
+	Wsh.RegWrite(HKEY_Root+HKEY_Path+HKEY_Key,""); 
+	HKEY_Key="margin_left"; 
+	Wsh.RegWrite(HKEY_Root+HKEY_Path+HKEY_Key,"0.39370"); 
+	HKEY_Key="margin_right"; 
+	Wsh.RegWrite(HKEY_Root+HKEY_Path+HKEY_Key,"0.39370"); 
+	HKEY_Key="margin_bottom"; 
+	Wsh.RegWrite(HKEY_Root+HKEY_Path+HKEY_Key,"0.49370"); 
+	HKEY_Key="margin_top"; 
+	Wsh.RegWrite(HKEY_Root+HKEY_Path+HKEY_Key,"0.49370"); 
+}
+	
+function Preview1(){
+	try{
+		PageSetup_del();
+		window.print();
+	}catch(e){window.print();}
+}
+</SCRIPT>
+
+<SCRIPT defer>   
+function  PutSettings(){     
+	factory.printing.header="";   
+	factory.printing.footer="";  
+	factory.printing.leftMargin="13";  
+	factory.printing.rightMargin="10";  
+	factory.printing.topMargin="10";   			 
+	factory.printing.bottomMargin="0.1"; 	
+}
+function Print(){
+	PutSettings();
+	factory.printing.Print(true);
+}
+
+function Preview(){
+	try{
+		PutSettings();
+		factory.printing.Preview();
+	}catch(e){}
+}
+</SCRIPT>
+</HEAD>
+<BODY onload=Preview();>
+<OBJECT id=factory style="DISPLAY: none" codeBase=ScriptX.cab#Version=5,60,0,360 
+classid=clsid:1663ed61-23eb-11d2-b92f-008048fdd814 VIEWASTEXT></OBJECT>
+<FORM id=form1 name=form1 
+action=to_cjdy_zgs.aspx?xh=0622&amp;XKKH=(2013-2014-2)-06100007-0622-1&amp;JFZ=0&amp;cjbblb1=1&amp;bmc=cjb&amp;BJDM=&amp;printType=2&amp;jfz1=0 
+method=post><INPUT type=hidden 
+value=dDwxMzUyNzM3ODg4Ozs+mW09y1EwD/8zI/zaRC2iny8ZAV4= name=__VIEWSTATE> 
+<TABLE width=640 align=center>
+  <THEAD>
+  <TR>
+    <TH colspan="6" align=middle>普洱学院课堂教学评价表（教师用表）</TH>
+    </TR>
+  <TR>
+    <TD width="17%" style="text-align:right;">课程名称：</TD>
+    <TD width="30%">&nbsp;</TD>
+    <TD width="17%" style="text-align:right;">任课教师：</TD>
+    <TD width="15">&nbsp;</TD>
+    <TD width="8%">&nbsp;</TD>
+    <TD width="13%">&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD style="text-align:right;">课程代码：</TD>
+    <TD>&nbsp;</TD>
+    <TD style="text-align:right;">授课班级：</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    </TR></THEAD>
+  <TBODY>
+  <TR>
+    <TD class="tdline">一级指标</TD>
+    <TD colspan="3" class="tdline">二级指标</TD>
+    <TD class="tdline">分值</TD>
+    <TD class="tdline">备注</TD>
+    </TR>
+  <TR>
+    <TD rowspan="5" class="tdline">教学态度<br>
+    20%</TD>
+    <TD colspan="3" class="tdline" style="text-align:left;">为人师表，治学严谨，教书育人。</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD rowspan="5" class="tdline">优秀4分<br>良好3分<br>合格2分<br>不合格1分</TD>
+    </TR>
+  <TR>
+    <TD colspan="3" class="tdline" style="text-align:left;">教学大纲、教学计划、教案等教学文件齐全。</TD>
+    <TD class="tdline">&nbsp;</TD>
+    </TR>
+ <TR>
+    <TD colspan="3" class="tdline" style="text-align:left;">严格课堂管理，落实考勤制度。</TD>
+    <TD class="tdline">&nbsp;</TD>
+    </TR>
+ <TR>
+    <TD colspan="3" class="tdline" style="text-align:left;">提前到达教室，准时下课不拖堂，认真做开讲前准备和授课后整理。</TD>
+    <TD class="tdline">&nbsp;</TD>
+    </TR>
+  <TR>
+    <TD colspan="3" class="tdline" style="text-align:left;">作业布置合理，及时评改，耐心辅导。</TD>
+    <TD class="tdline">&nbsp;</TD>
+    </TR>
+  <TR>
+    <TD rowspan="5" class="tdline">教学内容<br>
+      30%</TD>
+    <TD colspan="3" class="tdline" style="text-align:left;">执行教学大纲和教学计划，进度与计划误差小。</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD rowspan="5" class="tdline">优秀6分<br>良好5分<br>合格4分<br>不合格2分</TD>
+    </TR>
+ <TR>
+    <TD colspan="3" class="tdline" style="text-align:left;">合理选用优秀新版教材，注重开发本土教材、教辅、案例。</TD>
+    <TD class="tdline">&nbsp;</TD>
+    </TR>
+ <TR>
+    <TD colspan="3" class="tdline" style="text-align:left;">根据课程特点突出职业能力培养。</TD>
+    <TD class="tdline">&nbsp;</TD>
+    </TR>
+  <TR>
+    <TD colspan="3" class="tdline" style="text-align:left;">授课内容符合大纲要求。</TD>
+    <TD class="tdline">&nbsp;</TD>
+    </TR>
+  <TR>
+    <TD colspan="3" class="tdline" style="text-align:left;">渗透前沿知识，知识讲解清楚，重点难点突出。</TD>
+    <TD class="tdline">&nbsp;</TD>
+    </TR>
+ <TR>
+    <TD rowspan="5" class="tdline">教学方法<br>
+      20%</TD>
+    <TD colspan="3" class="tdline" style="text-align:left;">充分利用多媒体和其他教学手段，课件、板书设计合理，条理清晰。</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD rowspan="5" class="tdline">优秀4分<br>良好3分<br>合格2分<br>不合格1分</TD>
+    </TR>
+ <TR>
+    <TD colspan="3" class="tdline" style="text-align:left;">语言表达清晰、准确，逻辑性强。</TD>
+    <TD class="tdline">&nbsp;</TD>
+    </TR>
+  <TR>
+    <TD colspan="3" class="tdline" style="text-align:left;">理论联系实际，注重培养学生分析问题和解决问题的能力。</TD>
+    <TD class="tdline">&nbsp;</TD>
+    </TR>
+  <TR>
+    <TD colspan="3" class="tdline" style="text-align:left;">根据课程特点设计教学组织流程，教学手段灵活。</TD>
+    <TD class="tdline">&nbsp;</TD>
+    </TR>
+ <TR>
+    <TD colspan="3" class="tdline" style="text-align:left;">参加教研和教改活动、采用多样化教学方法。</TD>
+    <TD class="tdline">&nbsp;</TD>
+    </TR>
+ <TR>
+    <TD rowspan="5" class="tdline">教学效果<br>
+      30%</TD>
+    <TD colspan="3" class="tdline" style="text-align:left;">学生到课率高，迟到率低。</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD rowspan="5" class="tdline">优秀6分<br>良好5分<br>合格4分<br>不合格2分</TD>
+    </TR>
+  <TR>
+    <TD colspan="3" class="tdline" style="text-align:left;">课堂秩序良好，学生认真听课，记录完整。</TD>
+    <TD class="tdline">&nbsp;</TD>
+    </TR>
+  <TR>
+    <TD colspan="3" class="tdline" style="text-align:left;">考试（查）课试卷设计合理，成绩呈正态分布。</TD>
+    <TD class="tdline">&nbsp;</TD>
+    </TR>
+  <TR>
+    <TD colspan="3" class="tdline" style="text-align:left;">参加教学竞赛，成绩良好。</TD>
+    <TD class="tdline">&nbsp;</TD>
+    </TR>
+  <TR>
+    <TD colspan="3" class="tdline" style="text-align:left;">指导学生参加竞赛，成绩良好。</TD>
+    <TD class="tdline">&nbsp;</TD>
+    </TR>
+  <TR>
+    <TD height="34" class="tdline">总分</TD>
+    <TD colspan="3" class="tdline" style="text-align:left;">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+    <TD class="tdline">&nbsp;</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<DIV class=noprint align=center><INPUT id=btnPrint onclick=Preview1(); type=button value=" 打 印  "> 
+</DIV></FORM></BODY></HTML>
